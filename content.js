@@ -16,7 +16,10 @@ window.SITE_CONTENT = {
     signature: 'FAITE POUR LES ZONES TENDUES',
     socials: [
       { label: 'Extension Chrome', href: 'https://loge-mi.com' },
-      { label: 'Instagram', href: 'https://instagram.com/logemi' }
+      { label: 'Instagram', href: 'https://instagram.com/logemi' },
+      /* Obligation légale : 32 photos sont sous licence CC BY, qui impose de
+         créditer l'auteur. Ce lien doit rester accessible depuis le site. */
+      { label: 'Crédits photo', href: 'credits.html' }
     ]
   },
 
@@ -234,7 +237,7 @@ window.SITE_CONTENT = {
   const bottom = $$('.footer-bottom > p');
   if (bottom.length === 3) {
     bottom[0].textContent = C.brand.copyright;
-    bottom[1].innerHTML = C.brand.socials.map((s) => `<a href="${s.url}" target="_blank" rel="noopener">${s.label}</a>`).join('&nbsp;&nbsp;&nbsp;');
+    bottom[1].innerHTML = C.brand.socials.map((s) => `<a href="${s.href}" target="_blank" rel="noopener">${s.label}</a>`).join('&nbsp;&nbsp;&nbsp;');
     bottom[2].textContent = C.brand.signature;
   }
 })();

@@ -79,6 +79,18 @@
 
   /* image qui naît entre deux mots puis remplit l'écran.
      Croissance en ratio paysage (~1.9:1) avant d'atteindre 100vw × 100vh. */
+  /* ── DÉROGATION ASSUMÉE AU BUDGET D'ANIMATION ──────────────────────────
+     `set()` écrit width / height / marginLeft / marginRight à chaque frame.
+     C'est normalement interdit (cf. skill 60fps-animation : seuls transform et
+     opacity restent sur le compositeur), et c'est ce qui fait mesurer un CLS
+     de ~1.4 au gate perf.
+     C'est ASSUMÉ : l'effet consiste à faire grandir une image EN LIGNE dans la
+     phrase, le texte s'écartant autour d'elle. Ce reflow EST l'effet. Un FLIP
+     en transform donnerait une image qui glisse par-dessus le texte — un autre
+     effet, pas le même.
+     Le décalage est piloté par le scroll de l'utilisateur, donc attendu : ce
+     n'est pas le cas que la métrique CLS cherche à punir (un élément qui bouge
+     sous le doigt). Ne pas « corriger » sans décider d'abandonner l'effet. */
   function makeGrow(el) {
     const img = $('img', el);
     const line = el.parentElement;
@@ -102,7 +114,11 @@
         el.style.height = h.toFixed(1) + 'px';
         const m = fs * 0.13 + Math.min(t * 60, fs * 0.12);
         el.style.marginLeft = el.style.marginRight = m.toFixed(1) + 'px';
-        el.style.borderRadius = t > 0.985 ? '0' : '2px';
+        /* Le rayon ne change plus par frame : depuis le passage au vocabulaire
+           à deux valeurs (0 pour la structure, 999px pour l'action seule), cet
+           élément est à 0 en permanence. Écrire la même valeur 60 fois par
+           seconde provoquait un repaint inutile — et réintroduisait le 2px
+           que le reste du site a abandonné. */
         line.style.transform = `translate(${(-xOff * t).toFixed(1)}px, ${(-yOff * lift).toFixed(1)}px)`;
         img.style.transform = `translate(-50%, -50%) scale(${zoom})`;
       }
