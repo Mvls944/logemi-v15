@@ -1,0 +1,11 @@
+{
+  "servers": [
+    {
+      "name": "logemi",
+      "description": "Site vitrine Logemi — Site Immersif",
+      "command": "node .claude/serve-logemi.mjs",
+      "port": 4385,
+      "url": "http://localhost:4385"
+    }
+  ]
+}
