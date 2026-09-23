@@ -12,7 +12,7 @@ window.SITE_CONTENT = {
     title: 'Logemi — Le copilote de candidature locative',
     description: 'Filigrane tes justificatifs dans ton navigateur et génère le message qui répond à l’annonce en moins de 10 secondes. Plus de visites, zéro usurpation.',
     kicker: 'LOGEMI — CANDIDATURE LOCATIVE, FRANCE',
-    copyright: '© 2026 — LOGEMI SAS, FRANCE',
+    copyright: '© 2026 LOGEMI SAS, FRANCE',
     signature: 'FAITE POUR LES ZONES TENDUES',
     socials: [
       { label: 'Extension Chrome', href: 'https://loge-mi.com' },
@@ -50,12 +50,12 @@ window.SITE_CONTENT = {
     kicker: 'L’ARSENAL COMPLET',
     title: 'Quatre outils, une seule candidature',
     sub: 'Tout ce qui se joue entre l’annonce repérée et les clés obtenues.',
-    meta: 'QUATRE PILIERS — UN DOSSIER',
+    meta: 'QUATRE PILIERS, UN DOSSIER',
     features: [
-      { size: 'big',  illu: 'illustrations/fe-1.svg', title: 'Le message qui répond à l’annonce', meta: 'GÉNÉRATION IA — MOINS DE 10 S' },
-      { size: 'tall', illu: 'illustrations/fe-2.svg', title: 'Filigrane indélébile, en local', meta: 'DANS TON NAVIGATEUR — AES-256' },
-      { size: 'tall', illu: 'illustrations/fe-3.svg', title: 'Un dossier, un lien unique', meta: 'GARANT — COUPLE — COLOCATION' },
-      { size: 'big',  illu: 'illustrations/fe-4.svg', title: 'Alertes en temps réel et score sur 100', meta: 'LEBONCOIN — SELOGER — PAP — BIEN’ICI' }
+      { size: 'big',  illu: 'illustrations/fe-1.svg', title: 'Le message qui répond à l’annonce', meta: 'ÉCRIT EN MOINS DE 10 SECONDES' },
+      { size: 'tall', illu: 'illustrations/fe-2.svg', title: 'Filigrane indélébile, en local', meta: 'AES-256, EN LOCAL' },
+      { size: 'tall', illu: 'illustrations/fe-3.svg', title: 'Un dossier, un lien unique', meta: 'GARANT · COUPLE · COLOCATION' },
+      { size: 'big',  illu: 'illustrations/fe-4.svg', title: 'Alertes en temps réel et score sur 100', meta: 'LEBONCOIN · SELOGER · PAP · BIEN’ICI' }
     ]
   },
 
@@ -77,19 +77,19 @@ window.SITE_CONTENT = {
     cta: 'Essayer gratuitement →',
     image: 'images/process.jpg',
     items: [
-      { name: 'Compose', meta: 'ÉTAPE — 01', desc: 'Tes pièces, celles du garant, du conjoint ou du colocataire : tout tient dans un dossier unique. Il est noté sur 100 avant même d’être envoyé.' },
-      { name: 'Protège', meta: 'ÉTAPE — 02', desc: 'Chaque justificatif est filigrané à 45°, de façon indélébile, directement dans ton navigateur. Tes fichiers bruts ne transitent nulle part.' },
-      { name: 'Postule', meta: 'ÉTAPE — 03', desc: 'L’annonce est analysée, le message écrit pour ce bailleur précis, le dossier partagé par un lien unique dont tu gardes le contrôle.' }
+      { name: 'Compose', meta: '01', desc: 'Tes pièces, celles du garant, du conjoint ou du colocataire : tout tient dans un dossier unique. Il est noté sur 100 avant même d’être envoyé.' },
+      { name: 'Protège', meta: '02', desc: 'Chaque justificatif est filigrané à 45°, de façon indélébile, directement dans ton navigateur. Tes fichiers bruts ne transitent nulle part.' },
+      { name: 'Postule', meta: '03', desc: 'L’annonce est analysée, le message écrit pour ce bailleur précis, le dossier partagé par un lien unique dont tu gardes le contrôle.' }
     ]
   },
 
   /* 8 · PREUVE SOCIALE */
   testimonial: {
-    kicker: 'CDI — PARIS 11ᵉ',
+    kicker: 'CDI, PARIS 11ᵉ',
     figure: '48',
     unit: 'h',
     quote: 'J’ai cherché trois mois sur Leboncoin sans décrocher une seule visite. Les alertes instantanées et les messages générés ont tout changé.',
-    author: 'SARAH — LOCATAIRE, PARIS'
+    author: 'SARAH, LOCATAIRE À PARIS'
   },
 
   /* 9 · OBJECTIONS */
@@ -107,7 +107,7 @@ window.SITE_CONTENT = {
   contact: {
     kicker: 'UNE VISITE À DÉCROCHER ?',
     email: 'bonjour@logemi.fr',
-    reassurance: 'EXTENSION CHROME GRATUITE — SANS ENGAGEMENT'
+    reassurance: 'GRATUIT, SANS ENGAGEMENT'
   },
 
   /* 11 · TRAÎNÉE SOURIS */
